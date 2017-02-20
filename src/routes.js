@@ -1,5 +1,5 @@
-import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 import Admin from 'components/Admin'
 import Home from 'components/Home'
 import TenantResources from 'components/TenantResources'
@@ -7,12 +7,11 @@ import ChangePassword from 'components/ChangePassword'
 import Groups from 'components/Groups'
 import Agents from 'components/Agents'
 
-Vue.use(VueRouter)
+// Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Admin',
     component: Admin,
     children: [
       {
