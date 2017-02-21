@@ -6,13 +6,29 @@
       <input name="query" v-model="searchQuery">
     </form>
     <div class="groupsGrid">
-      <grid :data="gridData" :columns="gridColumns" :filter-key="searchQuery"></grid>
+      <grid id="gridComponent" :data="gridData" :columns="gridColumns" :filter-key="searchQuery" :show-data="showGroupData"></grid>
     </div>
+    
+    <md-dialog ref="groupInfoModal">
+      <md-dialog-title>Group Info</md-dialog-title>
+
+      <md-dialog-content>
+        <title>currentGroup.name</title>
+        <div>Group Id is: {{currentGroup.id}}</div>
+        <div>Group Description: {{currentGroup.description}}</div>
+      </md-dialog-content>
+
+      <md-dialog-actions>
+        <md-button class="md-primary" @click.native="closeGroupData('groupInfoModal')">Close</md-button>
+      </md-dialog-actions>
+    </md-dialog>
+
   </div>
 </template>
 
 <script>
-import grid from './basicComponents/grid'
+import VueMaterial from 'vue-material'
+import grid from './basicComponents/grid.component'
 import groupService from '../services/group.service'
 
 export default {
@@ -22,7 +38,8 @@ export default {
       message: 'Groups',
       searchQuery: '',
       gridColumns: ['id', 'name', 'description'],
-      gridData: []
+      gridData: [],
+      currentGroup: {}
     }
   },
   created () {
@@ -31,6 +48,15 @@ export default {
   },
   components: {
     grid
+  },
+  methods: {
+    showGroupData: function (group) { 
+      this.currentGroup = group     
+      this.$refs['groupInfoModal'].open();
+    },
+    closeGroupData: function() {
+      this.$refs['groupInfoModal'].close();
+    }
   }
 }
 </script>

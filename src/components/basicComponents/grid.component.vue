@@ -12,9 +12,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="group in filteredData" @click="showData(group)">
+      <tr v-for="entry in filteredData" @click="showEntryData(entry)">
         <td v-for="key in columns">
-          {{group[key]}}
+          {{entry[key]}}
         </td>
       </tr>
     </tbody>
@@ -27,7 +27,8 @@ export default {
   props: {
     data: Array,
     columns: Array,
-    filterKey: String
+    filterKey: String,
+    showData: Function
   },
   data: function () {
     var sortOrders = {}
@@ -72,8 +73,8 @@ export default {
       this.sortKey = key
       this.sortOrders[key] = this.sortOrders[key] * -1
     },
-    showData: function (group) {
-        // TODO: open modal window
+    showEntryData: function(entry){
+      this.showData(entry)
     }
   }
 }
