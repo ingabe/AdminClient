@@ -13,7 +13,7 @@
       <md-dialog-title>Group Info</md-dialog-title>
 
       <md-dialog-content>
-        <title>currentGroup.name</title>
+        <div>Group Name is: {{currentGroup.name}}</div>
         <div>Group Id is: {{currentGroup.id}}</div>
         <div>Group Description: {{currentGroup.description}}</div>
       </md-dialog-content>
