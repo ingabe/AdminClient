@@ -12,9 +12,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="entry in filteredData">
+      <tr v-for="group in filteredData" @click="showData(group)">
         <td v-for="key in columns">
-          {{entry[key]}}
+          {{group[key]}}
         </td>
       </tr>
     </tbody>
@@ -71,6 +71,9 @@ export default {
     sortBy: function (key) {
       this.sortKey = key
       this.sortOrders[key] = this.sortOrders[key] * -1
+    },
+    showData: function (group) {
+        // TODO: open modal window
     }
   }
 }
@@ -88,7 +91,7 @@ table {
     width: 80%;
     margin: auto;
         
-  border: 2px solid #42b983;
+  border: 2px solid lightblue;
   border-radius: 3px;
   background-color: #fff;
 }
@@ -97,7 +100,7 @@ th {
     border:  2px solid grey;
     text-align: center;
 
-  background-color: #42b983;
+  background-color: lightblue;
   color: rgba(255,255,255,0.66);
   cursor: pointer;
   -webkit-user-select: none;
@@ -107,10 +110,16 @@ th {
 }
 
 td {
-    border:  2px solid #42b983;
-
-  background-color: #f9f9f9;
+    border:  2px solid lightblue;
 }
+
+tr{
+    background-color: #f9f9f9;
+}
+
+tr:hover{
+    background-color: #dce0e5;
+} 
 
 th, td {
   min-width: 120px;

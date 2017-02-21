@@ -2,7 +2,7 @@ export function getGroups () {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(generateGroups())
-    }, 1000)
+    }, 100)
   })
 }
 
