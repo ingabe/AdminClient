@@ -4,7 +4,7 @@
             <nav-pane></nav-pane>
         </div>
         <div class="contentPane">
-            <loading-component v-if="loading"></loading-component>
+            <!--<loading-component v-if="loading"></loading-component>-->
             <router-view></router-view>
         </div>
     </div>

@@ -6,7 +6,7 @@
       <input name="query" v-model="searchQuery">
     </form>
     <div class="groupsGrid">
-      <grid id="gridComponent" :data="gridData" :columns="gridColumns" :filter-key="searchQuery" :show-data="showGroupData"></grid>
+      <grid id="gridComponent" :data="groups" :columns="gridColumns" :filter-key="searchQuery" :show-data="showGroupData"></grid>
     </div>
     
     <md-dialog ref="groupInfoModal">
@@ -51,9 +51,6 @@ export default {
   created () {
     //groupService.getGroups().then(groups => this.gridData = groups)    
     this.$store.dispatch('getGroups')
-      .then(
-        groups => this.gridData = groups
-      );
   },
   components: {
     grid,
