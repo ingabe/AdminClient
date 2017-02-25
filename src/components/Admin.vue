@@ -72,6 +72,7 @@ export default {
       top: 0;
       left: 50px;
       right: 0;
+      bottom: 0;
     }
   }
 

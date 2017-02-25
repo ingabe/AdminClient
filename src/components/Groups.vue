@@ -57,7 +57,7 @@ export default {
     modal
   },
   computed  : {
-    ...mapGetters(['groups', 'loading'])
+    ...mapGetters(['groups'])
   },
   methods: {
     showGroupData: function (group) { 
