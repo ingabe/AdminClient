@@ -4,13 +4,16 @@
             <nav-pane></nav-pane>
         </div>
         <div class="contentPane">
+            <loading-component v-if="loading"></loading-component>
             <router-view></router-view>
         </div>
     </div>
 </template>
 
 <script>
+import {mapGetters, mapMutations} from 'vuex';
 import NavPane from './NavPane'
+import loadingComponent from './basicComponents/loading.component'
 
 export default {
   name: 'TenantResources',
@@ -19,8 +22,12 @@ export default {
       message: 'TenantResources'
     }
   },
+  computed: {
+    ...mapGetters(['loading'])
+  },
   components: {
-    NavPane
+    NavPane,
+    loadingComponent
   }
 }
 </script>

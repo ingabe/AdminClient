@@ -11,7 +11,6 @@ import store from './store'
 
 Vue.use(VueMaterial)
 
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,

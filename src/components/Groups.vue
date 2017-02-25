@@ -22,13 +22,19 @@
         <md-button class="md-primary" @click.native="closeGroupData('groupInfoModal')">Close</md-button>
       </md-dialog-actions>
     </md-dialog>
+    <!--<modal :type="'Group'" :currentObject="currentGroup"></modal>-->
 
   </div>
 </template>
 
 <script>
+// import { eventHub } from '../main'
+import {mapGetters, mapMutations} from 'vuex';
+import {GET_GROUPS} from '../modules/groups/groups.module';
+
 import VueMaterial from 'vue-material'
 import grid from './basicComponents/grid.component'
+import modal from './basicComponents/modal.component'
 import groupService from '../services/group.service'
 
 export default {
@@ -43,20 +49,31 @@ export default {
     }
   },
   created () {
-    groupService.getGroups().then(groups => this.gridData = groups)
-    return
+    //groupService.getGroups().then(groups => this.gridData = groups)    
+    this.$store.dispatch('getGroups')
+      .then(
+        groups => this.gridData = groups
+      );
   },
   components: {
-    grid
+    grid,
+    modal
+  },
+  computed  : {
+    ...mapGetters(['groups', 'loading'])
   },
   methods: {
     showGroupData: function (group) { 
-      this.currentGroup = group     
+      this.currentGroup = group;     
       this.$refs['groupInfoModal'].open();
+      // eventHub.$emit('clicked', group);
     },
     closeGroupData: function() {
       this.$refs['groupInfoModal'].close();
-    }
+    },
+    ...mapMutations({
+      getGroups: GET_GROUPS
+    })
   }
 }
 </script>

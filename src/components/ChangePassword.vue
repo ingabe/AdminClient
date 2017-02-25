@@ -48,9 +48,9 @@ export default {
 
 <style lang="scss" scoped>  
 
-    .changePasswordForm {
-         margin:auto;
-         width: 400px;
-    }
+  .changePasswordForm {
+        margin:auto;
+        width: 400px;
+  }
 
 </style>
