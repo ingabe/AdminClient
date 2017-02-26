@@ -1,10 +1,10 @@
-export const ADD_GROUP = 'cart/ADD_GROUP';
-export const ADD_GROUP_SUCCESS = 'cart/ADD_GROUP_SUCCESS';
-export const ADD_GROUP_ERROR = 'cart/ADD_GROUP_ERROR';
+export const ADD_GROUP = 'store/ADD_GROUP';
+export const ADD_GROUP_SUCCESS = 'store/ADD_GROUP_SUCCESS';
+export const ADD_GROUP_ERROR = 'store/ADD_GROUP_ERROR';
 
-export const REMOVE_GROUP = 'cart/REMOVE_GROUP';
-export const REMOVE_GROUP_SUCCESS = 'cart/REMOVE_GROUP_SUCCESS';
-export const REMOVE_GROUP_ERROR = 'cart/REMOVE_GROUP_ERROR';
+export const REMOVE_GROUP = 'store/REMOVE_GROUP';
+export const REMOVE_GROUP_SUCCESS = 'store/REMOVE_GROUP_SUCCESS';
+export const REMOVE_GROUP_ERROR = 'store/REMOVE_GROUP_ERROR';
 
 export const GET_GROUPS = 'store/GET_GROUPS';
 export const GET_GROUPS_SUCCESS = 'store/GET_GROUPS_SUCCESS';
