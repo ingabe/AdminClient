@@ -10,7 +10,7 @@ export default {
     name: 'Home',
     data () {
         return {
-            message: 'Home Page'
+            message: this.$t("message.homePage")
         }
     },
     components: {

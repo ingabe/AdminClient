@@ -2,7 +2,7 @@
 import VueI18n from 'vue-i18n'
 
 // ready translated locales
-var locales = {
+export const locales = {
     en: {
         message: {
             homePage: 'Home Page',
