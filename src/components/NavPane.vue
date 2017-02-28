@@ -4,7 +4,7 @@
             <div>
                 <ul class="nav navbar-nav">
                     <router-link :to="{ name: 'Groups'}" active-class="active">
-                        <div class="barButton">Groups</div>
+                        <div class="barButton">Groups ({{groups.length}})</div>
                     </router-link>
                     <router-link :to="{ name: 'Agents'}" active-class="active">
                         <div class="barButton">Agents</div>
@@ -14,6 +14,17 @@
         </nav>
     </div>
 </template>
+
+<script>
+    
+import {mapGetters} from 'vuex';
+        
+export default {
+    computed  : {
+        ...mapGetters(['groups'])
+    }
+}
+</script>
 
 <style lang="scss" scoped>  
 

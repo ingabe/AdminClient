@@ -15,7 +15,8 @@ import groupService from '../../services/group.service';
 const state = {
   groups  : [],
   loading: false,
-  error  : null
+  error  : null,
+	hello: {}  	  
 }
 
 const mutations = {

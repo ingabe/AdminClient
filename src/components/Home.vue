@@ -7,13 +7,14 @@
 <script>
 
 export default {
-  name: 'Home',
-  data () {
-    return {
-      message: 'Home Page'
+    name: 'Home',
+    data () {
+        return {
+            message: 'Home Page'
+        }
+    },
+    components: {
     }
-  },
-  components: {
-  }
 }
+
 </script>

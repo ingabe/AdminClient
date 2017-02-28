@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.2\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <TypeScriptExperimentalDecorators>true</TypeScriptExperimentalDecorators>
+    <TypeScriptEmitDecoratorMetadata>True</TypeScriptEmitDecoratorMetadata>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{16D58E44-B0C9-4FF3-A643-534C1BFAA4BA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AdminClient</RootNamespace>
+    <AssemblyName>AdminClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".babelrc" />
+    <Content Include=".editorconfig" />
+    <Content Include=".eslintignore" />
+    <Content Include="dist\static\css\app.a4d5c5710b2ade41b8cd5f6dd9d0f534.css.map" />
+    <Content Include="dist\static\fonts\glyphicons-halflings-regular.448c34a.woff2" />
+    <Content Include="dist\static\fonts\glyphicons-halflings-regular.e18bbf6.ttf" />
+    <Content Include="dist\static\fonts\glyphicons-halflings-regular.f4769f9.eot" />
+    <Content Include="dist\static\fonts\glyphicons-halflings-regular.fa27723.woff" />
+    <Content Include="dist\static\js\app.9ec0a43aec0969fe8b20.js.map" />
+    <Content Include="dist\static\js\manifest.46370f9c1a07c1427e2f.js.map" />
+    <Content Include="dist\static\js\vendor.cf242ffecffd2a45b2fd.js.map" />
+    <Content Include="package.json" />
+    <Content Include="src\App.vue" />
+    <Content Include="src\assets\fonts\playfair\PlayfairDisplay-Regular.ttf" />
+    <Content Include="src\assets\fonts\ubunto\Ubuntu-Light.ttf" />
+    <Content Include="src\components\Admin.vue" />
+    <Content Include="src\components\Agents.vue" />
+    <Content Include="src\components\basicComponents\grid.component.vue" />
+    <Content Include="src\components\basicComponents\loading.component.vue" />
+    <Content Include="src\components\basicComponents\modal.component.vue" />
+    <Content Include="src\components\ChangePassword.vue" />
+    <Content Include="src\components\Groups.vue" />
+    <Content Include="src\components\Home.vue" />
+    <Content Include="src\components\NavPane.vue" />
+    <Content Include="src\components\TenantResources.vue" />
+    <Content Include="src\scss\_base.scss" />
+    <Content Include="src\scss\_fonts.scss" />
+    <Content Include="src\scss\_forms.scss" />
+    <Content Include="src\scss\_functions.scss" />
+    <Content Include="src\scss\_helpers.scss" />
+    <Content Include="src\scss\_layout.scss" />
+    <Content Include="src\scss\_main-footer.scss" />
+    <Content Include="src\scss\_vars.scss" />
+    <Content Include="src\scss\_vendor.scss" />
+    <Content Include="src\style.scss" />
+    <Content Include="src\translation\translations.js" />
+    <Content Include="test\unit\.eslintrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".eslintrc.js" />
+    <Content Include="build\build.js" />
+    <Content Include="build\check-versions.js" />
+    <Content Include="build\dev-client.js" />
+    <Content Include="build\dev-server.js" />
+    <Content Include="build\utils.js" />
+    <Content Include="build\vue-loader.conf.js" />
+    <Content Include="build\webpack.base.conf.js" />
+    <Content Include="build\webpack.dev.conf.js" />
+    <Content Include="build\webpack.prod.conf.js" />
+    <Content Include="build\webpack.test.conf.js" />
+    <Content Include="config\dev.env.js" />
+    <Content Include="config\index.js" />
+    <Content Include="config\prod.env.js" />
+    <Content Include="config\test.env.js" />
+    <Content Include="dist\index.html" />
+    <Content Include="dist\static\css\app.a4d5c5710b2ade41b8cd5f6dd9d0f534.css" />
+    <Content Include="dist\static\img\glyphicons-halflings-regular.8988968.svg" />
+    <Content Include="dist\static\js\app.9ec0a43aec0969fe8b20.js" />
+    <Content Include="dist\static\js\manifest.46370f9c1a07c1427e2f.js" />
+    <Content Include="dist\static\js\vendor.cf242ffecffd2a45b2fd.js" />
+    <Content Include="index.html" />
+    <Content Include="src\assets\changePassword.png" />
+    <Content Include="src\assets\logo.png" />
+    <Content Include="src\assets\tenantResources.png" />
+    <Content Include="src\main.js" />
+    <Content Include="src\modules\auth\auth.module.js" />
+    <Content Include="src\modules\groups\groups.module.js" />
+    <Content Include="src\routes.js" />
+    <Content Include="src\services\auth.service.js" />
+    <Content Include="src\services\group.service.js" />
+    <Content Include="src\store.js" />
+    <Content Include="src\vue-plugins.js" />
+    <Content Include="test\e2e\custom-assertions\elementCount.js" />
+    <Content Include="test\e2e\nightwatch.conf.js" />
+    <Content Include="test\e2e\runner.js" />
+    <Content Include="test\e2e\specs\test.js" />
+    <Content Include="test\unit\index.js" />
+    <Content Include="test\unit\karma.conf.js" />
+    <Content Include="test\unit\specs\Hello.spec.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <TypeScriptTarget>ES6</TypeScriptTarget>
+    <TypeScriptJSXEmit>None</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49863</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49863/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
