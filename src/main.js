@@ -14,10 +14,9 @@ import {locales} from './translation/translations'
 Vue.use(VueMaterial)
 Vue.use(VueI18n)
 
-Vue.config.lang = 'ru'
+Vue.config.lang = 'en'
 
 Object.keys(locales).forEach(function (lang) {
-    console.log(`locale: ${lang}. Vue: ${Vue}. Lcale: ${Vue.locale}`)
     Vue.locale(lang, locales[lang])
 })
 

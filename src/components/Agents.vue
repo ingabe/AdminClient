@@ -7,7 +7,7 @@ export default {
   name: 'Agents',
   data () {
     return {
-      message: 'Agents'
+        message: this.$t("message.agents")
     }
   }
 }

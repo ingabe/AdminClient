@@ -11,8 +11,9 @@ export const locales = {
         },
         changePassword: {
             userName: 'User Name',
-            password: 'Password',
-            newPassword: 'New Pаssword'
+            oldPassword: 'Old Password',
+            newPassword: 'New Pаssword',
+            changePassword: 'Change Password'
         }
     },
     ru: {
@@ -23,8 +24,9 @@ export const locales = {
         },
         changePassword: {
             userName: 'Пользователь',
-            password: 'Пароль',
-            newPassword: 'Новый пароль'
+            oldPassword: 'Старый Пароль',
+            newPassword: 'Новый пароль',
+            changePassword: 'Изменить пароль'
         }
     }
 }

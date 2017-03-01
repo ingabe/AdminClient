@@ -4,10 +4,10 @@
             <div>
                 <ul class="nav navbar-nav">
                     <router-link :to="{ name: 'Groups'}" active-class="active">
-                        <div class="barButton">Groups ({{groups.length}})</div>
+                        <div class="barButton">{{ $t('message.groups') }} ({{groups.length}})</div>
                     </router-link>
                     <router-link :to="{ name: 'Agents'}" active-class="active">
-                        <div class="barButton">Agents</div>
+                        <div class="barButton">{{ $t('message.agents') }}</div>
                     </router-link>
                 </ul>
             </div>

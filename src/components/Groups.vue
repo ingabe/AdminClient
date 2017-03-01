@@ -41,11 +41,11 @@ export default {
   name: 'Groups',
   data () {
     return {
-      message: 'Groups',
-      searchQuery: '',
-      gridColumns: ['id', 'name', 'description'],
-      gridData: [],
-      currentGroup: {}
+        message: this.$t("message.groups"),
+        searchQuery: '',
+        gridColumns: ['id', 'name', 'description'],
+        gridData: [],
+        currentGroup: {}
     }
   },
   created () {
